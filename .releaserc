@@ -3,7 +3,7 @@
     [      
       "@semantic-release/release-notes-generator",
       "@semantic-release/npm",
-      "@semantic-release/commit-analyzer",
+      ["@semantic-release/commit-analyzer",
       {
         "preset": "angular",
         "parserOpts": {
@@ -14,4 +14,5 @@
       }
     ]
   ]
+ ]
 }
