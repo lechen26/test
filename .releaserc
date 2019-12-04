@@ -2,14 +2,7 @@
   "plugins": [ 
     ["@semantic-release/commit-analyzer", {
       "preset": "angular",
-      "releaseRules": [
-        {"message":"Merge","release":"patch"}
-      ],
-      "parserOpts": {
-        "noteKeywords": [
-          "Merge"
-        ]
-      }
+      "subjectKeywords": ["Merge"]
     }],
     "@semantic-release/release-notes-generator",
     "@semantic-release/npm"
