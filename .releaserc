@@ -3,7 +3,7 @@
     ["@semantic-release/commit-analyzer", {   
       "preset": "angular",
       "releaseRules": [
-        {"scope":"Merge","subject": "Merge", "message":"Merge","release":"minor"}
+        {"scope":"Merge","subject": "Merge", "message":"Merge","header": "Merge","release":"minor"}
       ]
     }],
     "@semantic-release/release-notes-generator",
