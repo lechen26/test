@@ -3,6 +3,7 @@
     [
       "@semantic-release/commit-analyzer",
       {
+        "preset": "angular",
         "parserOpts": {
           "noteKeywords": [
             "Merge"
