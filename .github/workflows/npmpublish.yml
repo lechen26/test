@@ -13,9 +13,12 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/lechen26
-      - run: TAG=`echo ${GITHUB_REF} |tr -d "refs/tags"`
-      - run: echo "TAG is ${TAG}"
+      - run: echo ${TAG}
+        env:
+          TAG:  $(echo ${GITHUB_REF} |tr -d "refs/tags")
       - run: cat package.json | sed "s/version.*/version\":\"${TAG}\",/"
+        env:
+          TAG:  $(echo ${GITHUB_REF} |tr -d "refs/tags")
       - run: sed -i "s/version.*/version\":\"${TAG}\",/" package.json
       - run: cat package.json  
       - run: npm ci
