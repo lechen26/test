@@ -1,11 +1,12 @@
 {
   "plugins": [ 
     ["@semantic-release/commit-analyzer", {
-      "preset": "angular",
-       "parserOpts": {
-          "mergePattern": "Merge pull request (.*)"
+      {
+        "parserOpts": {
+          "mergePattern": "^Merge pull request",
+          "mergeCorrespondence": ["id"]
         }
-    }],
+      }],
     "@semantic-release/release-notes-generator",
     "@semantic-release/npm"
   ]
