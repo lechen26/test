@@ -18,13 +18,5 @@
   "description": "",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
-  },
-  "release": {
-        "plugins": [
-            "@semantic-release/commit-analyzer"  
-        ],
-        "parserOpts": {
-            "nodeKeywords: "Merge pull request .*"
-        }
-    }
+  } 
 }
