@@ -19,12 +19,14 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "plugins": [
-    ["@semantic-release/commit-analyzer", {
-      "parserOpts": {
-        "noteKeywords": ["Merge pull request"]
-      }
-    }],
-    "@semantic-release/release-notes-generator"
-  ]
+  "release": {
+        "plugins": [
+            "@semantic-release/commit-analyzer",
+            "@semantic-release/release-notes-generator",
+            "@semantic-release/npm"
+        ],
+        "parserOpts": {
+            "mergePattern": "Merged PR .*:"
+        }
+    },
 }
