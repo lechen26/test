@@ -1,6 +1,9 @@
 {
   "plugins": [ 
-    ["@semantic-release/commit-analyzer", {      
+    ["@semantic-release/commit-analyzer", {   
+      "releaseRules": [
+        {"merge":"Merge","release":"minor"}
+      ],
        "parserOpts": {
          "mergePattern": "/[mM]erge (.*) #(\\d+) from (.*)$/",
           "mergeCorrespondence": ["plain", "id", "source"]
