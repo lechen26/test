@@ -16,5 +16,15 @@
   },
   "homepage": "https://github.com/lechen26/test#readme",
   "description": "",
-"publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "plugins": [
+    ["@semantic-release/commit-analyzer", {
+      "parserOpts": {
+        "noteKeywords": ["Merge pull request"]
+      }
+    }],
+    "@semantic-release/release-notes-generator"
+  ]
 }
