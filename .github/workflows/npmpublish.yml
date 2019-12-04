@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/lechen26
-      - run: echo ${GITHUB_REF}
+      - run: TAG=`echo ${GITHUB_REF} |tr -d "refs/tags"`
       - run: npm ci
       - run: npm publish --registry=https://registry.npmjs.org/ --tag ver --access public
         env:
