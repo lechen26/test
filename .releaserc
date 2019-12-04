@@ -1,18 +1,14 @@
 {
-  "plugins": [
-    [      
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/npm",
-      ["@semantic-release/commit-analyzer",
-      {
-        "preset": "angular",
-        "parserOpts": {
-          "noteKeywords": [
-            "Merge"
-          ]
-        }
+  "plugins": [ 
+    ["@semantic-release/commit-analyzer", {
+      "preset": "angular",
+      "parserOpts": {
+        "noteKeywords": [
+          "Merge"
+        ]
       }
-    ]
+    }],
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/npm"
   ]
- ]
 }
