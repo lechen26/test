@@ -1,14 +1,11 @@
 {
   "plugins": [ 
     ["@semantic-release/commit-analyzer", {   
+      "preset": "angular",
       "releaseRules": [
-        {"merge":"Merge","release":"minor"}
-      ],
-       "parserOpts": {
-         "mergePattern": "/[mM]erge (.*) #(\\d+) from (.*)$/",
-          "mergeCorrespondence": ["plain", "id", "source"]
-        }
-      }],
+        {"subject":"Merge ","release":"minor"}
+      ]
+    }],
     "@semantic-release/release-notes-generator",
     "@semantic-release/npm"
   ]
