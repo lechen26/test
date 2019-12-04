@@ -24,7 +24,7 @@
             "@semantic-release/commit-analyzer"  
         ],
         "parserOpts": {
-            "mergePattern": "Merge pull request .*"
+            "nodeKeywords: "Merge pull request .*"
         }
     }
 }
