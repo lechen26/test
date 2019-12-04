@@ -3,7 +3,6 @@
     [
       "@semantic-release/commit-analyzer",
       {
-        "preset": "npm",
         "parserOpts": {
           "noteKeywords": [
             "Merge pull request"
