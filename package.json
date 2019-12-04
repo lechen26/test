@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "@lechen26/test",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -11,16 +11,12 @@
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lechen26/test/issues"
-  },
   "homepage": "https://github.com/lechen26/test#readme",
   "description": "",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/lechen26"
   },
   "dependencies": {
-    "conventional-changelog": "^3.1.15",
-    "semantic-release": "^15.13.31"
+    "npm-bump": "0.0.28"
   }
 }
