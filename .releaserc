@@ -1,9 +1,9 @@
 {
   "plugins": [ 
     ["@semantic-release/commit-analyzer", {      
-        "parserOpts": {
-          "mergePattern": "^Merge pull request",
-          "mergeCorrespondence": ["id"]
+       "parserOpts": {
+         "mergePattern": "/[mM]erge (.*) #(\\d+) from (.*)$/",
+          "mergeCorrespondence": ["plain", "id", "source"]
         }
       }],
     "@semantic-release/release-notes-generator",
