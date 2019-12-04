@@ -22,7 +22,8 @@ jobs:
         npm ci
       env:
         CI: true
-    - name: Authenticate to npm
-      run: npm login --registry=https://npm.pkg.github.com/
+    - name: Release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_SECRET }}
+        NPM_TOKEN: ${{ secrets.GITHUB_SECRET }}
+      run: npx semantic-release
