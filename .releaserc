@@ -2,9 +2,8 @@
   "plugins": [ 
     ["@semantic-release/commit-analyzer", {
       "preset": "angular",
-       "writerOpts": {
-          "commitsSort": ["subject", "scope"],
-          "subjectKeywords": ["Merge"]
+       "parserOpts": {
+          "mergePattern": "Merge pull request (.*)"
         }
     }],
     "@semantic-release/release-notes-generator",
