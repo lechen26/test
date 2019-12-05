@@ -1,0 +1,22 @@
+{
+  "name": "@lechen26/test",
+  "version": "1.2.5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lechen26/test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/lechen26/test#readme",
+  "description": "",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/lechen26"
+  },
+  "dependencies": {
+    "npm-bump": "0.0.28"
+  }
+}
