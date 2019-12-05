@@ -13,7 +13,8 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+      - run: echo ::set-env name=TAG::$(echo ${GITHUB_REF} |tr -d "refs/tags")
+      - run: sed -i "s/version.*/version\":\"${TAG}\",/" package.json
       - run: npm ci
-      - run: npm publish --registry=https://registry.npmjs.org/ --tag ver --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_SECRET}}  
+      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_SECRET }}" >> ~/.npmrc
+      - run: npm publish
