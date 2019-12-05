@@ -1,6 +1,6 @@
 {
   "name": "@lechen26/test",
-  "version": "1.1.1-pre",
+  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,8 +15,5 @@
   "description": "",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/lechen26"
-  },
-  "dependencies": {
-    "npm-bump": "0.0.28"
-  }
+  }  
 }
