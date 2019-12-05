@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://registry.npmjs.org/
+          registry-url: https://npm.pkg.github.com/
       - run: echo ::set-env name=TAG::$(echo ${GITHUB_REF} |tr -d "refs/tags")
       - run: sed -i "s/version.*/version\":\"${TAG}\",/" package.json
       - run: npm ci
