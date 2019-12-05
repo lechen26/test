@@ -14,10 +14,8 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/lechen26
       - run: | 
-         echo ::set-env name=TAG::$(echo ${GITHUB_REF} |tr -d "refs/tags")       
-      - run: cat package.json | sed "s/version.*/version\":\"${TAG}\",/"       
-      - run: sed -i "s/version.*/version\":\"${TAG}\",/" package.json
-      - run: cat package.json  
+         echo ::set-env name=TAG::$(echo ${GITHUB_REF} |tr -d "refs/tags")   
+      - run: sed -i "s/version.*/version\":\"${TAG}\",/" package.json   
       - run: npm ci
       - run: npm publish --access public
         env:
