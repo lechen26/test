@@ -14,9 +14,6 @@
   "homepage": "https://github.com/lechen26/test#readme",
   "description": "",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/lechen26"
-  },
-  "dependencies": {
-    "npm-bump": "0.0.28"
+    "registry": "https://npm.pkg.github.com"
   }
 }
